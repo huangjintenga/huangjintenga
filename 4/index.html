@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body{
+      background-color: #222;
+      /* height: 14rem; */
+  } 
+  div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+
+  }
+  .clrcle{
+      position: absolute;
+      height: 12rem;
+      width: 12rem;
+      border-radius: 6rem;
+      border: .6rem solid cyan;
+    }
+    .clrcle:nth-child(1){
+        transform: rotateX(70deg);
+        animation: animate1 .5s linear infinite;
+    }
+    .clrcle:nth-child(2){
+        transform: rotateY(70deg) rotateX(30deg) rotateZ(0deg);
+        animation: animate2 .8s linear infinite;
+    }
+    .clrcle:nth-child(3){
+        transform: rotateY(70deg) rotateX(-30deg);
+        animation: animate3 1.2s linear infinite;
+    }
+    .clrcle::before,
+    .clrcle::after{
+        content: '';
+        position: absolute;
+        height: 2rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        background-color: pink;
+        transform: rotateZ(90deg);
+
+    }
+    .clrcle::before{
+        left: -5%;
+    }
+    @keyframes animate1{
+        0%{
+            transform: rotateX(70deg) rotateZ(0deg);
+        }
+        50%{
+            transform: rotateX(70deg) rotateZ(180deg);
+           border-color: green;
+        }
+        100%{
+            transform: rotateX(70deg) rotateZ(360deg);
+        }
+    }
+    @keyframes animate2{
+        0%{
+            transform: rotateY(70deg) rotateX(30deg) rotateZ(0deg);
+        }
+        50%{
+            transform: rotateY(70deg) rotateX(30deg) rotateZ(180deg);
+           border-color: green;
+
+        }
+        100%{
+            transform: rotateY(70deg) rotateX(30deg) rotateZ(360deg);
+        }
+    }
+    @keyframes animate3{
+        0%{
+         transform: rotateY(70deg) rotateX(-30deg) rotateZ(0deg);
+        }
+        50%{
+         transform: rotateY(70deg) rotateX(-30deg) rotateZ(180deg);
+         border-color: green;
+
+        }
+        100%{
+         transform: rotateY(70deg) rotateX(-30deg) rotateZ(360deg);
+        }
+    }
+</style>
+<body>
+   <div class="container">
+       <div class="clrcle"></div>
+       <div class="clrcle"></div>
+       <div class="clrcle"></div>
+   </div> 
+</body>
+</html>
