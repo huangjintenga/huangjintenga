@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 300px;
+        height: 500px;
+        background-color: rgb(229, 255, 0);
+        border: 2px solid #000;
+        border-radius: 120px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+    }
+    .pants{
+        width: 100%;
+        height: 150px;
+        position: absolute;
+        bottom: 0;
+        border-top: 2px solid #000;
+        background-color: rgb(0, 140, 255);
+    }
+    .prominent{
+        width: 200px;
+        height: 80px;
+        position: absolute;
+        background-color: rgb(0, 140, 255);
+        border: 2px solid #000;
+        border-bottom: none;
+        top: -82px;
+        left: 48px;
+    }
+    .belts-left,
+    .belts-right{
+        width: 100px;
+        height: 20px;
+        position: absolute;
+        transform: rotateZ(45deg);
+        background-color: rgb(0, 140, 255);
+        border: 2px solid #000;
+        left: -23px;
+        top: -111px;
+        
+
+    }
+    .belts .belts-right{
+        transform: rotateZ(-45deg);
+        left: 219px;
+       
+        top: -111px;
+    }
+    .belts{
+        position: relative;
+        width: 100%;
+
+    }
+    .belts-left::after,
+    .belts-right::after{
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: #000;
+        display: inline-block;
+        border-radius: 100%;
+        position: absolute;
+        left: 1px;
+        top: 5px;
+    }
+    .belts-left::after{
+        top: 5px;
+        left: 88px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="pants">
+            <div class="prominent">
+            </div>
+            <div class="belts">
+                <div class="belts-left"></div>
+                <div class="belts-right"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
