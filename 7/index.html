@@ -7,13 +7,19 @@
 </head>
 <style>
     .container{
+        position: relative;
+        margin: 80px auto;
+        width: 300px;
+        height: 500px;
+    }
+    .bodys{
         width: 300px;
         height: 500px;
         background-color: rgb(229, 255, 0);
         border: 2px solid #000;
         border-radius: 120px;
         overflow: hidden;
-        margin: 0 auto;
+      
         position: relative;
     }
     .pants{
@@ -74,17 +80,206 @@
         top: 5px;
         left: 88px;
     }
+    .Pocketpocket{
+        width: 100px;
+        height: 50px;
+        border-radius: 0 0 20px 20px;
+        margin: 70px auto 0 auto;
+        border: 2px solid #000;
+    }
+
+    .line1{
+        width: 40px;
+        height: 40px;
+        border-top: 2px solid #000;
+        border-left: 2px solid #000;
+        border-top-left-radius: 60px;
+        transform: rotateZ(164deg);
+        position: absolute;
+        bottom: 44px;
+        left: 23px;
+    }
+    .line2{
+        width: 90px;
+        height: 90px;
+        border-left: 2px solid #000;
+        position: absolute;
+        top: 91px;
+        left: 148px;
+    }
+    .line3{
+        width: 40px;
+        height: 40px;
+        border-top: 2px solid #000;
+        border-left: 2px solid #000;
+        border-top-left-radius: 60px;
+        transform: rotateZ(287deg);
+        position: absolute;
+        bottom: 45px;
+        left: 236px;
+    }
+    .Glasses{
+        position: relative;
+    }
+    .Glasses .Glasses-item1,
+    .Glasses .Glasses-item2{
+        width: 80px;
+        height: 80px;
+        border: 2px solid #000;
+        border-radius: 100%;
+        position: absolute;
+        left: 51px;
+        top: 46px;
+        background-color: #fff;
+    }
+    .Glasses .Glasses-item1{
+        left: 168px;
+        top: 46px;
+    }
+    .Glassesbox1,
+    .Glassesbox2{
+        width: 50px;
+        height: 20px;
+        position: absolute;
+        top: 79px;
+        left: 2px;
+        background-color: #000;
+        transform: skew(-10deg) rotateZ(-10deg);
+    }
+    .Glassesbox2{
+        left: 252px;
+        top: 81px;
+        transform: skew(10deg) rotateZ(10deg);
+
+    }
+    .Eye{
+        position: relative;
+    }
+    .eyes{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 73px;
+        top: 69px;
+        border-radius: 100%;
+        background-color: #000;
+    }
+    .eyes:last-child{
+        left: 190px;
+    }
+    .hair{
+	position: relative;
+    transform: rotateZ(10deg);
+}
+
+.hair_left{
+	width:130px;
+	height:100px;
+	border-top:8px solid #000;
+	border-radius: 50%;
+	position: absolute;
+	left:38px;
+	top:-31px;
+	transform:rotate(27deg);
+}
+
+.hair_right{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border-top:5px solid #000;
+	position: absolute;
+	left:77px;
+	top:-15px;
+	transform:rotate(15deg);
+}
+.feet{
+	position: absolute;
+    top: 97px;
+    left: 21px;
+}
+
+.left_foot,
+.right_foot{
+	width:30px;
+	height:50px;
+	border-bottom-left-radius:9px;
+	border-bottom-right-radius:6px;
+	background:#000;
+	position:absolute;
+	top:405px;
+	left:88px;
+}
+
+.right_foot{
+	left:140px;
+}
+
+.left_foot:after,
+.right_foot:after{
+	content:"";
+	width:60px;
+	height:35px;
+	border-radius:20px 10px 21px 15px;
+	background:#000;
+	position:absolute;
+	left:-36px;
+	top:15px;
+	transform:rotate(5deg);
+}
+
+.right_foot:after{
+	left:15px;
+	border-radius:10px 20px 15px 21px;
+	transform:rotate(-5deg);
+}
+
+.shadow{
+	width:250px;
+	height:4px;
+	border-radius:50%;
+	background:rgba(0,0,0,0.3);
+	position:relative;
+	box-shadow:0 0 15px rgba(0,0,0,0.3);
+	top:454px;
+	left:5px;
+}
 </style>
 <body>
     <div class="container">
-        <div class="pants">
-            <div class="prominent">
+        <div class="hair">
+            <span class="hair_left"></span>
+            <span class="hair_right"></span>
+        </div>
+        <div class="bodys">
+            <div class="Glasses">
+                <div class="Glasses-item1"></div>
+                <div class="Glasses-item2"></div>
+                <div class="Glassesbox1"></div>
+                <div class="Glassesbox2"></div>
+                <div class="Eye">
+                    <div class="eyes"></div>
+                    <div class="eyes"></div>
+                </div>
             </div>
-            <div class="belts">
-                <div class="belts-left"></div>
-                <div class="belts-right"></div>
+            <div class="pants">
+                <div class="prominent">
+                     <div class="Pocketpocket"></div>
+                </div>
+                <div class="belts">
+                    <div class="belts-left"></div>
+                    <div class="belts-right"></div>
+                </div>
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
         </div>
-    </div>
+        <div class="feet">
+            <div class="left_foot"></div>
+            <div class="right_foot"></div>
+        </div>
+     </div>
+       
 </body>
 </html>
