@@ -20,6 +20,7 @@
        background-color: #673c63;
        box-shadow: 0 2px 5px #111;
        position: absolute;
+       overflow: hidden;
        transform: translate(-50%,-50%);
    }
    .candles{
@@ -41,6 +42,89 @@
        left: 50%;
        transform-origin: center right;
        transform:translate(60%,-25%);
+       animation: expand-body 3s infinite linear;
+   }
+   @keyframes expand-body{
+       0%,40%{
+           transform: scale(1,1) translate(60%,-25%);
+       }
+       55%,45%{
+           transform: scale(1.1,1.1) translate(60%,-28%);
+       }
+       60%{
+           transform: scale(1.1,1.1) translate(60%,-25%);
+       }
+       65%{
+           transform: scale(0.89,0.89) translate(60%,-25%);
+       }
+       70%{
+           transform: scale(1,1) translate(60%,-25%);
+       }
+       65%{
+           transform: scale(1.1,1.1) translate(60%,-25%);
+       }
+   }
+   .candles-small{
+    animation: shake-left 3s infinite linear;
+       
+   }
+   @keyframes shake-left{
+       0%,40%{
+          left: 20%;
+          transform: translate(60%,-15%);
+       }
+       50%,54%{
+          left: 20%;
+          transform: translate(60%,-15%);
+       }
+       59%{
+          left: 20%;
+          transform: translate(60%,-15%);
+       }
+       62%{
+        left: 18%;
+          transform: translate(60%,-15%);
+       }
+       65%{
+        left: 21%;
+          transform: translate(60%,-15%);
+       }
+       67%{
+        left: 20%;
+          transform: translate(60%,-15%);
+       }
+       75%{
+        left: 20%;
+          transform: translate(60%,-15%) scale(1.18,0.82);
+          background-color: #fff;
+          border-color: #673c63;
+       }
+       91%{
+        left: 20%;
+          transform: translate(60%,-10%) scale(1.18,0.82);
+          background-color: #f44336;
+          border-color: #f44336;
+          box-shadow: 12px 0px 0px #f44336 inset;
+       }
+       92%{
+        left: 20%;
+          transform: translate(60%,-10%) scale(0.85,1.15);
+          background-color: #f44336;
+          border-color: #f44336;
+          box-shadow: 12px 0px 0px #f44336 inset;
+       }
+       95%{
+        left: 20%;
+        transform: scale(1.05, 0.95) translate(60%, -15%);
+          background-color: #f44336;
+          border-color: #f44336;
+          box-shadow: 12px 0px 0px #f44336 inset;
+       }
+       97% {
+    left: 20%;
+    transform: scale(1, 1) translate(60%, -15%);
+  }
+        
    }
    .stict{
        position: absolute;
@@ -51,15 +135,18 @@
        border-radius: 8px;
        transform:translate(-50%,-100%);
    }
-   .eyes{
+  .candles-big .eyes,
+  .candles-small .eyes{
        position: absolute;
        left: 50%;
        width: 35px;
        height: 30px;
        transform: translate(-50%);
    }
-   .eyes::before,
-   .eyes::after{
+  .candles-big .eyes::before,
+  .candles-big .eyes::after,
+  .candles-small .eyes::before,
+  .candles-small .eyes::after{
        content: '';
        width: 5px;
        height: 5px;
@@ -70,10 +157,36 @@
        top: 20%;
        transform: translateX(-70%);
    }
-   .eyes::after{
+  .candles-big .eyes::after,
+  .candles-small .eyes::after{
        left: 70%;
    }
-   .mouth{
+   .candles-big .eyes::before,
+  .candles-big .eyes::after{
+      animation: blink-eyes 3s infinite linear;
+  }
+  @keyframes blink-eyes{
+    0%,35%{
+        transform: translateX(-70%);
+        opacity: 1;
+    }
+    36%,39%{
+        transform: translateX(-70%);
+        opacity: 0;
+    }
+    40%{
+        transform: translateX(-70%);
+        opacity: 1;
+    }
+    50%,65%{
+        transform: translateX(-140%);
+    
+    }
+    66%{
+        transform: translateX(-70%);
+    }
+  }
+  .candles-big .mouth{
        position: absolute;
        left: 40%;
        top: 20%;
@@ -82,18 +195,79 @@
        border-radius: 20px;
        background-color: #673c67;
        transform: translate(-50%,-50%);
+       animation: utff 3s infinite linear;
+   }
+   @keyframes utff{
+    0%,40%{
+        width: 0px;
+        height: 0px;
+    }
+    50%,54%{
+        width: 15px;
+        height: 15px;
+        left: 30%;
+    }
+    59%{
+        width: 5px;
+        height: 5px;
+        left: 20%;
+    }
+    62%{
+       width: 2px;
+       height: 2px;
+       left: 20%;
+    
+    }
+    67%{
+        width: 0px;
+        height: 0px;
+        left: 30%;
+    }
+   }
+   .candles-small{
+       width: 42px;
+       height: 60px;
+       position:absolute;
+       left: 20%;
+       top: 65%;
+       border: 3px solid #673c63;
+       box-shadow:-2px 0 #333333 inset;
+       border-bottom: 0;
+       transform-origin: center right;
+       transform: translate(60%,-15%);
+   }
+   .candles-smallFIRE{
+       width:16px;
+       height: 20px;
+       background-color: #ff9800;
+       border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+       position: absolute;
+       top: 47%;
+       left: 40%;
+       z-index: 999;
+       transform: translate(-50%,-50%);
    }
 </style>
 <body>
     <div class="candle">
         <div class="candles">
+            <div class="candles-smallFIRE">
+
+            </div>
+           <div class="candles-small">
+                <div class="head">
+                    <div class="mouth"></div>
+                    <div class="eyes"></div>
+                </div>
+                <div class="stict"></div>
+           </div> 
            <div class="candles-big">
             <div class="head">
                 <div class="mouth"></div>
                 <div class="eyes"></div>
             </div>
-                <div class="stict"></div>
-           </div> 
+            <div class="stict"></div>
+       </div>
         </div>
     <div class="foolr"> </div>
 
