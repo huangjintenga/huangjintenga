@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   body{
+    background-color: #fef4ad;
+   }
+   .candle{
+       position: absolute;
+       left: 50%;
+       top: 70%;
+   }
+   .foolr{
+       width: 350px;
+       height: 5px;
+       background-color: #673c63;
+       box-shadow: 0 2px 5px #111;
+       position: absolute;
+       transform: translate(-50%,-50%);
+   }
+   .candles{
+       width: 250px;
+       height: 150px;
+       position: absolute;
+       transform: translate(-50%,-100%);
+   }
+   .candles-big{
+       width: 35px;
+       height: 100px;
+       background-color: #fff;
+       border: 3px solid #673c63;
+       border-bottom: 0;
+       box-shadow: -2px 0 #95c6f2 inset;
+       border-radius: 3px;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform-origin: center right;
+       transform:translate(60%,-25%);
+   }
+   .stict{
+       position: absolute;
+       left: 50%;
+       width: 3px;
+       height: 15px;
+       background-color: #673c63;
+       border-radius: 8px;
+       transform:translate(-50%,-100%);
+   }
+   .eyes{
+       position: absolute;
+       left: 50%;
+       width: 35px;
+       height: 30px;
+       transform: translate(-50%);
+   }
+   .eyes::before,
+   .eyes::after{
+       content: '';
+       width: 5px;
+       height: 5px;
+       border-radius: 100%;
+       position: absolute;
+       background-color: #673c63;
+       left: 30%;
+       top: 20%;
+       transform: translateX(-70%);
+   }
+   .eyes::after{
+       left: 70%;
+   }
+   .mouth{
+       position: absolute;
+       left: 40%;
+       top: 20%;
+       width: 15px;
+       height: 15px;
+       border-radius: 20px;
+       background-color: #673c67;
+       transform: translate(-50%,-50%);
+   }
+</style>
+<body>
+    <div class="candle">
+        <div class="candles">
+           <div class="candles-big">
+            <div class="head">
+                <div class="mouth"></div>
+                <div class="eyes"></div>
+            </div>
+                <div class="stict"></div>
+           </div> 
+        </div>
+    <div class="foolr"> </div>
+
+    </div>
+</body>
+</html>
